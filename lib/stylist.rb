@@ -36,4 +36,9 @@ class Stylist
     Stylist.new({:name => name, :id => id})
   end
 
+  # def clients
+  #   clients = []
+  #   results = DB.exec("SELECT * FROM clients WHERE ")
+  # end
+
 end
