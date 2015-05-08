@@ -18,19 +18,19 @@ Installation:
   - CREATE DATABASE hair_salon_test WITH TEMPLATE hair_salon;
 - If properly set up, the tables will have the following layout:
 
-  Table Stylists:
+  - Table Stylists:
 
-id  | name
-------------- | -------------
-1  | Tiberius
-2  | Leonard
+    id  | name
+    ------------- | -------------
+    1  | Tiberius
+    2  | Leonard
 
-Table Clients:
+  - Table Clients:
 
-id  | name  | stylist_id
-----|-------| -------------
-1  | Khan   | 2
-2  | Q      | nil
+    id  | name  | stylist_id
+    ----|-------| -------------
+    1  | Khan   | 2
+    2  | Q      | nil
 
 
 
