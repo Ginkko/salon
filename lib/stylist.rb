@@ -37,8 +37,9 @@ class Stylist
   end
 
   def client_add(client_id)
-    DB.exec("UPDATE clients SET stylist_id = #{@id} WHERE id = #{client_id};")  
+    DB.exec("UPDATE clients SET stylist_id = #{@id} WHERE id = #{client_id};")
   end
+
   def clients
     clients = []
     results = DB.exec("SELECT * FROM clients WHERE stylist_id =#{@id};")
