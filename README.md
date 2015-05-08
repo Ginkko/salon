@@ -4,8 +4,12 @@ By Alec Arme
 Ruby v 2.2.0
 
 Features:
-- Create/Delete Stylists
+- Create Stylists
+- Delete Stylists
+- Update Stylist names
 - Create/Delete Clients
+- Delete Clients
+- Update Client names
 - Assign Clients to Stylists
 
 Installation:
