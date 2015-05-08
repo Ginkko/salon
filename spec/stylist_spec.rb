@@ -27,7 +27,7 @@ describe(Stylist) do
       test_stylist.save
       test_client.save
       test_stylist.client_add(test_client.id)
-      expect(Client.find(test_client.id).doctor_id.to_i).to eq(test_doctor.id)
+      expect(Client.find(test_client.id).stylist_id.to_i).to eq(test_stylist.id)
     end
   end
 
