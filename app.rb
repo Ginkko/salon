@@ -5,7 +5,6 @@ require "sinatra/reloader"
 require "pg"
 require "pry"
 also_reload("lib/**/*.rb")
-
 DB = PG.connect({:dbname => "hair_salon"})
 
 get('/') do

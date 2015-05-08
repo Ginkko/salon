@@ -34,6 +34,7 @@ describe('adding a client to a stylist', {:type => :feature}) do
     click_button('submit')
     expect(page).to have_content(test_client.name)
   end
+end
 
 describe('deleting a client', {:type => :feature}) do
   it('shows a client detail page. On clicking delete button, shows a delete confirmation page.') do
@@ -53,6 +54,4 @@ describe('deleting a stylist', {:type => :feature}) do
     click_button("delete")
     expect(page).to have_content("Deleted.")
   end
-end
-
 end
