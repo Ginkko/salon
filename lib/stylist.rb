@@ -36,9 +36,15 @@ class Stylist
     Stylist.new({:name => name, :id => id})
   end
 
-  # def clients
-  #   clients = []
-  #   results = DB.exec("SELECT * FROM clients WHERE ")
-  # end
-
+  def clients
+    clients = []
+    results = DB.exec("SELECT * FROM clients WHERE stylist_id =#{@id};")
+    results.each do |result|
+      name = result.fetch('name')
+      id = result.fetch('id').to_i
+      stylist_id = result.fetch('stylist_id').to_i
+      clients.push(Client.new({:name => name, :id => id, :stylist_id => stylist_id}))
+    end
+    clients
+  end
 end
