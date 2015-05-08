@@ -69,6 +69,16 @@ get('/clients/:id') do
   erb(:client)
 end
 
+patch('/clients/:id/updated') do
+  client_id = params.fetch('id').to_i
+  @client = Client.find(client_id)
+  if params.fetch("name") != nil
+    @client.update(:name => params.fetch('name'))
+  end
+  erb(:client)
+end
+
+
 delete('/client_delete') do
   client_id = params.fetch('client_id').to_i
   client = Client.find(client_id)

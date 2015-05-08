@@ -1,4 +1,12 @@
 <h1>Client Details for <%= @client.name %></h1>
+<h4>Update Client Name:</h4>
+<form action="/clients/<%= @client.id %>/updated" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <div class "form-group">
+    <input type="text" name="name">
+    <button class="btn btn-info" id="update">Update</button>
+  </div>
+</form>
 <h4>Delete This Client:</h4>
 <form action="/client_delete" method="post">
   <div class="form-group">
