@@ -10,4 +10,14 @@ describe(Client) do
     end
   end
 
+  describe ('.find') do
+    it('returns a client with given id') do
+      client1 = Client.new({:name => "Khan", :id => nil})
+      client2 = Client.new({:name => "Soran", :id => nil})
+      client1.save
+      client2.save
+      expect(Client.find(client2.id)).to eq(client2)
+    end
+  end
+
 end

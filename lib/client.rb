@@ -28,4 +28,11 @@ class Client
     same_name && same_id
   end
 
+  def self.find(id)
+    result = DB.exec("SELECT * FROM clients WHERE id = #{id};")
+    name = result.first.fetch('name')
+    id = result.first.fetch('id').to_i
+    Client.new({:name => name, :id => id})
+  end
+
 end
