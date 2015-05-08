@@ -10,7 +10,7 @@ Features:
 Installation:
 - Bundle to install all gems.
 - Requires a PSQL Database with the following setup method:
-  - #psql
+  - psql
   - CREATE DATABASE hair_salon;
   - \c hair_salon
   - CREATE TABLE stylists (id serial PRIMARY KEY, name varchar);
@@ -31,7 +31,5 @@ Installation:
     ----|-------| -------------
     1  | Khan   | 2
     2  | Q      | nil
-
-
 
 MIT LICENSE
