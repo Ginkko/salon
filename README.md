@@ -19,12 +19,14 @@ Installation:
 - If properly set up, the tables will have the following layout:
 
   Table Stylists:
+
 id  | name
 ------------- | -------------
 1  | Tiberius
 2  | Leonard
 
 Table Clients:
+
 id  | name  | stylist_id
 ------------| -------------
 1  | Khan   | 2
