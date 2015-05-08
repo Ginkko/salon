@@ -69,3 +69,10 @@ get('/clients/:id') do
   @client = Client.find(client_id)
   erb(:client)
 end
+
+delete('/client_delete') do
+  client_id = params.fetch('client_id').to_i
+  client = Client.find(client_id)
+  client.delete
+  erb(:deleted)
+end

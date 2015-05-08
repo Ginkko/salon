@@ -34,4 +34,16 @@ describe('adding a client to a stylist', {:type => :feature}) do
     click_button('submit')
     expect(page).to have_content(test_client.name)
   end
+
+describe('deleting a client', {:type => :feature}) do
+  it('shows a client detail page. On clicking delte button, shows a delete confirmation page.') do
+    test_client = Client.new({:name => "Khan", :id => nil, :stylist_id => nil})
+    test_client.save
+    visit("/clients/#{test_client.id}")
+    click_button("delete")
+    expect(page).to have_content("Deleted.")
+  end
+end
+
+
 end
