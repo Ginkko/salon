@@ -41,10 +41,21 @@ post('/stylists/:id') do
   @stylist = Stylist.find(stylist_id)
   client_id = params.fetch('clients').to_i
   @stylist.client_add(client_id)
+  @clients = @stylist.clients
   @all_clients = Client.all
   erb(:stylist)
 end
 
+patch('/stylists/:id/updated') do
+  stylist_id = params.fetch('id').to_i
+  @stylist = Stylist.find(stylist_id)
+  if params.fetch("name") != nil
+    @stylist.update(:name => params.fetch('name'))
+  end
+  @clients = @stylist.clients
+  @all_clients = Client.all
+  erb(:stylist)
+end
 
 get('/clients') do
   @clients = Client.all

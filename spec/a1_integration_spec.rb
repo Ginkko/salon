@@ -47,6 +47,17 @@ describe('updating a client', {:type => :feature}) do
   end
 end
 
+describe('updating a stylist', {:type => :feature}) do
+  it('shows a stylist detial page. On entering a name and clicking update button, shows the stylist detail page with updated name') do
+    test_stylist = Stylist.new({:name => "Tiberius", :id => nil})
+    test_stylist.save
+    visit("/stylists/#{test_stylist.id}")
+    fill_in('name', :with => "Leonard")
+    click_button("update")
+    expect(page).to have_content("Leonard")
+  end
+end
+
 describe('deleting a client', {:type => :feature}) do
   it('shows a client detail page. On clicking delete button, shows a delete confirmation page.') do
     test_client = Client.new({:name => "Khan", :id => nil, :stylist_id => nil})
