@@ -28,7 +28,7 @@ id  | name
 Table Clients:
 
 id  | name  | stylist_id
-------------| -------------
+----|-------| -------------
 1  | Khan   | 2
 2  | Q      | nil
 
