@@ -36,7 +36,7 @@ describe('adding a client to a stylist', {:type => :feature}) do
   end
 
 describe('deleting a client', {:type => :feature}) do
-  it('shows a client detail page. On clicking delte button, shows a delete confirmation page.') do
+  it('shows a client detail page. On clicking delete button, shows a delete confirmation page.') do
     test_client = Client.new({:name => "Khan", :id => nil, :stylist_id => nil})
     test_client.save
     visit("/clients/#{test_client.id}")
@@ -45,5 +45,14 @@ describe('deleting a client', {:type => :feature}) do
   end
 end
 
+describe('deleting a stylist', {:type => :feature}) do
+  it('shows a stylist detail page. On clicking delete button, shows a delete confirmation page.') do
+    test_stylist = Stylist.new({:name => "Tiberius", :id => nil})
+    test_stylist.save
+    visit("/stylists/#{test_stylist.id}")
+    click_button("delete")
+    expect(page).to have_content("Deleted.")
+  end
+end
 
 end

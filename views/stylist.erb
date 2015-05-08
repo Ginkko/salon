@@ -16,3 +16,11 @@
     <button id="submit" type="submit" class="btn btn-info">Save</button>
   </div>
 </form>
+<h4>Delete This Stylist:</h4>
+<form action="/stylist_delete" method="post">
+  <div class="form-group">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="stylist_id" value="<%= @stylist.id %>">
+    <button class="btn btn-danger" name="delete" id="delete">Delete</button>
+  </div>
+</form>

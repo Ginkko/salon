@@ -76,3 +76,10 @@ delete('/client_delete') do
   client.delete
   erb(:deleted)
 end
+
+delete('/stylist_delete') do
+  stylist_id = params.fetch('stylist_id').to_i
+  stylist = Stylist.find(stylist_id)
+  stylist.delete
+  erb(:deleted)
+end
