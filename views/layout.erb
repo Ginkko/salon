@@ -2,34 +2,37 @@
 <html>
   <head>
     <title>Salon-O-Rama</title>
+    <link rel="stylesheet" href="/bootstrap.css">
     <link rel="stylesheet" href="/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
   </head>
   <body>
-    <%= yield %>
+    <div id="wrap" class="container">
+      <%= yield %>
+    </div>
   </body>
   <footer>
     <div id ="footer">
-          <div class ="row">
-          <div class="text-center">
-            <div class="col-md-6">
-              <a href="/stylists">List of Stylists</a>
-            </div>
-            <div class="col-md-6">
-              <a href="/clients">List of Clients</a>
-            </div>
+        <div class ="row">
+        <div class="text-center">
+          <div class="col-md-6">
+            <a href="/stylists">List of Stylists</a>
+          </div>
+          <div class="col-md-6">
+            <a href="/clients">List of Clients</a>
           </div>
         </div>
-        <div class="row">
-          <div class="text-center">
-            <div class="col-md-6">
-              <a href="/stylists/new">Add a Stylist</a>
-            </div>
-            <div class="col-md-6">
-              <a href="/clients/new">Add a Client</a>
-            </div>
+      </div>
+      <div class="row">
+        <div class="text-center">
+          <div class="col-md-6">
+            <a href="/stylists/new">Add a Stylist</a>
+          </div>
+          <div class="col-md-6">
+            <a href="/clients/new">Add a Client</a>
           </div>
         </div>
+      </div>
     </div>
   </footer>
 </html>

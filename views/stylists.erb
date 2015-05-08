@@ -1,7 +1,6 @@
 <h1>List of Stylists</h1>
-
 <ul>
   <% @stylists.each do |stylist| %>
-    <li><%= stylist.name %></li>
+    <li><a href="/stylists/<%= stylist.id %>"><%= stylist.name %></li>
   <% end %>
 </ul>
