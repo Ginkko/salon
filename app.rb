@@ -63,3 +63,9 @@ end
 get('/clients/new') do
   erb(:client_add)
 end
+
+get('/clients/:id') do
+  client_id = params.fetch('id').to_i
+  @client = Client.find(client_id)
+  erb(:client)
+end
