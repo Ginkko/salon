@@ -47,4 +47,5 @@ class Stylist
     end
     clients
   end
+
 end

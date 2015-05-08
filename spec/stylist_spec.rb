@@ -20,6 +20,17 @@ describe(Stylist) do
     end
   end
 
+  describe('#client_add') do
+    it('assigns a client to a stylist') do
+      test_stylist = Stylist.new({:name => "Tiberius", :id => nil})
+      test_client = Client.new({:name => "Khan", :id => nil, :stylist_id => nil})
+      test_stylist.save
+      test_client.save
+      test_stylist.client_add(test_client.id)
+      expect(Client.find(test_client.id).doctor_id.to_i).to eq(test_doctor.id)
+    end
+  end
+
   describe('#clients') do
     it('returns a list of clients associated with the stylist') do
       test_stylist = Stylist.new({:name => 'Tiberius', :id => nil})
